@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html >
+<html>
 	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" href="css/style.css">
+		https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js
+		<script>
+			
+			function init() {
+			console.log("load called")
+				particlesJS.load('dots', config, function() { //'config/dots-config.json'
+					console.log('callback - particles.js config loaded');
+				});
+			}
+		</script>
+		<style>
+			html, body, div {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%
+			}
+		</style>
 	</head>
-	<body>
-		<canvas></canvas>
-		<script src="js/index.js"></script>
+	<body onload="init()">
+		<div id="dots"></div>
 	</body>
 </html>
