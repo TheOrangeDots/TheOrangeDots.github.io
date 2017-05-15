@@ -3,9 +3,7 @@
 	<head>
 		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 		<script>
-			
 			function init() {
-			console.log("load called")
 				particlesJS.load('dots', 'config/dots-config.json', function() {
 					console.log('callback - particles.js config loaded');
 				});
@@ -17,6 +15,13 @@
 				padding: 0;
 				width: 100%;
 				height: 100%
+			}
+			canvas {
+				display: block;
+			}
+			
+			#dots {
+				background-color: #000	
 			}
 		</style>
 	</head>
