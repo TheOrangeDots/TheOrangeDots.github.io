@@ -1,1 +1,12 @@
-How to properly build a Servoy Web Component 
+# How to properly build a Servoy Web Component 
+
+## proper coordination with controller.readOnly
+A Servoy Form can be made readOnly through the `controller.readOnly` property. 
+When a form is made visible in the UI, the value of `controller.readOnly` is pushed onto all elements on the form that have a property called `readOnly`.
+
+## supporting controller.focusFirstField
+In order to support the `controller.focusFirstField` api, the Web Component must:
+- implement an api method names `requestFocus`
+- must have a property of type `tabseq`
+
+https://github.com/Servoy/servoy-client/blob/996d0908e989946c1c498a09f20de89b6099fa75/servoy_ngclient/src/com/servoy/j2db/server/ngclient/component/WebFormController.java#L358
